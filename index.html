@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLANT FINDER FORM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="style/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <section>
+        <header>
+            <div id="svglogo"><img src="./media/Gerald-G-KU-castilleja-miniata.svg" alt="red flower green leaves"></div>
+        </header>
+    </section>
+
+    <section id="video">
+        <div class="helpHover">HELP VIDEO</div>
+        <div class="helpVideo"><video width="320" height="240" autoplay muted>
+                <source src="media/botanical_garden_plants.mp4" type="video/mp4">
+            </video></div>
+    </section>
+
+
+    <form action="#" id="my-form">
+
+        <section id="locationpicker">
+            <fieldset id="location">
+                <legend>
+                    <h3>Where would you like to keep your plant?</h3>
+                </legend>
+                <div>
+                    <input type="checkbox" id="bedroom" name="location">
+                    <label for="bedroom">Bedroom</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" id="bathroom" name="location">
+                    <label for="bathroom">bathroom</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="LivingRoom" name="location">
+                    <label for="LivingRoom">Living Room</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Kitchen" name="location">
+                    <label for="Kitchen">Kitchen</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="Office" name="location">
+                    <label for="Office">Office</label>
+                </div>
+                <div class="error-msg" id="location-error" title="select a location for your plant">Select a location
+                </div>
+            </fieldset>
+        </section>
+        <p></p>
+        <section id="customerinfo">
+            <fieldset id="MyInformation">
+                <legend>My Information</legend>
+                <p></p>
+                <section id="myfirstname">
+                    <div class="input-container">
+                        <i class="fa fa-user icon"></i>
+                        <input class="input-field" type="text" placeholder="Enter first name" id="firstname"
+                            pattern="[A-Za-z]{2,25}" required>
+                        <div class="error-msg" id="firstname-error" title="Must contain 2 to 25 letters">Must contain 2
+                            to
+                            25 letters</div>
+                    </div>
+                </section>
+                <section id="mylastname">
+                    <div class="input-container">
+                        <i class="fa fa-user icon"></i>
+                        <input type="text" class="input-field" id="lastname" placeholder="Enter last name"
+                            pattern="[A-Za-z]{2,6}" required>
+                        <div class="error-msg" id="lastname-error" title="Must contain 3 to 25 letters">Must contain 3
+                            to 25
+                            letters</div>
+                    </div>
+                </section>
+                <section id="myemail">
+                    <div class="input-container">
+                        <i class="fa fa-envelope icon"></i>
+                        <input class="input-field" type="email" id="email"
+                            placeholder="Enter a valid email eg rose@me.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <div class="error-msg" id="email-error" title="Must contain 5 to 25 characters and an @ symbol">
+                            Must
+                            contain 5 to 25 characters and an @ symbol</div>
+                    </div>
+                </section>
+                <section id="myphonenum">
+                    <div class="input-container">
+                        <i class="fa fa-phone icon"></i>
+                        <input class="input-field" type="tel" id="phonenum"
+                            placeholder="Enter your phone number eg 123456789" minlength="9" required>
+                        <div class="error-msg" id="phonenum-error" title="Must contain 9 or more numbers">Must contain 9
+                            or more numbers</div>
+                    </div>
+                </section>
+            </fieldset>
+        </section>
+        <p></p>
+        <section id="deliverydetails">
+            <fieldset id="Delivery">
+                <legend>Delivery Details</legend>
+                <p></p>
+                <section id="dateofdelivery">
+                    <div class="input-container">
+                        <i class="fa fa-calendar icon"></i>
+                        <input class="input-field" type="date" id="deliverydate" min="2021-12-03" max="2021-12-25"
+                            required>
+                        <div class="error-msg" id="calendar-error" title="Please select a date">Please select a date
+                            before christmas day</div>
+                    </div>
+                </section>
+                <section id="plantquantity">
+                    <div class="input-container">
+                        <i class="fa fa-asterisk icon"></i>
+                        <input class="input-field" type="number" id="numOfPlants"
+                            placeholder="How many plants? Minimum of 2 per order" min="2" required>
+                        <div class="error-msg" id="numOfPlants-error" title="Enter a number of plants">Enter a number of
+                            plants - 2 Minimum</div>
+                    </div>
+                </section>
+            </fieldset>
+        </section>
+        <p></p>
+        <button type="submit" class="btn">Find my plants</button>
+    </form>
+
+</body>
+
+</html>
